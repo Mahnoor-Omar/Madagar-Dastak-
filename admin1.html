@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel - Madadgar Dastak</title>
+    <link rel="stylesheet" href="css/style1.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>Madadgar Dastak</h1>
+                <p>Helping hands for those in need</p>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index1.html">Home</a></li>
+                    <li><a href="search1.html">Search Services</a></li>
+                    <li><a href="submit1.html">Submit Service</a></li>
+                    <li><a href="feedback1.html">Feedback</a></li>
+                    <li class="active"><a href="admin1.html">Admin</a></li>
+                </ul>
+                <div class="mobile-menu">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section class="admin-section">
+        <div class="container">
+            <h2>Admin Panel - Service Approvals</h2>
+            <div class="admin-login hidden" id="login-form">
+                <h3>Please log in to continue</h3>
+                <div class="form-group">
+                    <label for="admin-username">Username</label>
+                    <input type="text" id="admin-username">
+                </div>
+                <div class="form-group">
+                    <label for="admin-password">Password</label>
+                    <input type="password" id="admin-password">
+                </div>
+                <button id="login-btn" class="btn">Log In</button>
+            </div>
+
+            <div class="admin-content hidden" id="admin-content">
+                <div class="admin-controls">
+                    <button id="refresh-btn" class="btn"><i class="fas fa-sync-alt"></i> Refresh</button>
+                    <button id="logout-btn" class="btn"><i class="fas fa-sign-out-alt"></i> Log Out</button>
+                </div>
+                
+                <div class="pending-services">
+                    <h3>Pending Service Submissions</h3>
+                    <div id="pending-list" class="services-list">
+                        <!-- Services will be loaded here via JavaScript -->
+                    </div>
+                </div>
+                
+                <div class="approved-services">
+                    <h3>Approved Services</h3>
+                    <div id="approved-list" class="services-list">
+                        <!-- Approved services will be loaded here -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Madadgar Dastak</h3>
+                    <p>Helping underprivileged communities in Lahore access essential services.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index1.html">Home</a></li>
+                        <li><a href="search1.html">Search Services</a></li>
+                        <li><a href="submit1.html">Submit Service</a></li>
+                        <li><a href="feedback1.html">Feedback</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <p><i class="fas fa-envelope"></i> info@madadgardastak.pk</p>
+                    <p><i class="fas fa-phone"></i> +92 300 1234567</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Madadgar Dastak. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main1.js"></script>
+    <script src="js/admin1.js"></script>
+</body>
+</html>

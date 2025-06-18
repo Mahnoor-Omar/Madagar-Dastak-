@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback - Madadgar Dastak</title>
+    <link rel="stylesheet" href="css/style1.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>Madadgar Dastak</h1>
+                <p>Helping hands for those in need</p>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index1.html">Home</a></li>
+                    <li><a href="search1.html">Search Services</a></li>
+                    <li><a href="submit1.html">Submit Service</a></li>
+                    <li class="active"><a href="feedback1.html">Feedback</a></li>
+                    <li><a href="admin1.html">Admin</a></li>
+                </ul>
+                <div class="mobile-menu">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section class="feedback-section">
+        <div class="container">
+            <h2>Share Your Experience</h2>
+            <p>If you've used any of the services listed on Madadgar Dastak, please share your feedback to help us improve.</p>
+            
+            <form id="feedback-form">
+                <div class="form-group">
+                    <label for="name">Your Name (Optional)</label>
+                    <input type="text" id="name" name="name">
+                </div>
+                
+                <div class="form-group">
+                    <label for="service-used">Service You Used*</label>
+                    <input type="text" id="service-used" name="service-used" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="feedback-category">Category*</label>
+                    <select id="feedback-category" name="feedback-category" required>
+                        <option value="">Select a category</option>
+                        <option value="food">Food Assistance</option>
+                        <option value="housing">Housing Support</option>
+                        <option value="healthcare">Healthcare</option>
+                        <option value="education">Education</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="comments">Your Feedback*</label>
+                    <textarea id="comments" name="comments" required placeholder="Please share your experience..."></textarea>
+                </div>
+                
+                <button type="submit" class="btn">Submit Feedback</button>
+            </form>
+            
+            <div id="feedback-success" class="hidden">
+                <i class="fas fa-check-circle"></i>
+                <h3>Thank You for Your Feedback!</h3>
+                <p>Your input helps us improve our services and assist more people in need.</p>
+                <a href="index1.html" class="btn">Return to Home</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Madadgar Dastak</h3>
+                    <p>Helping underprivileged communities in Lahore access essential services.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index1.html">Home</a></li>
+                        <li><a href="search1.html">Search Services</a></li>
+                        <li><a href="submit1.html">Submit Service</a></li>
+                        <li><a href="feedback1.html">Feedback</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <p><i class="fas fa-envelope"></i> info@madadgardastak.pk</p>
+                    <p><i class="fas fa-phone"></i> +92 000 0000000</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Madadgar Dastak. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main1.js"></script>
+    <script src="js/form-handler1.js"></script>
+</body>
+</html>
