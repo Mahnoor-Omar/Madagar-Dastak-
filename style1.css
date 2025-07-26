@@ -24,7 +24,9 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
     color: var(--text-color);
-    background-color: #f5f5f5;
+    background: linear-gradient(135deg, #0f1419 0%, #1e3a5f 25%, #2d5aa0 50%, #1e3a5f 75%, #0f1419 100%);
+    background-attachment: fixed;
+    min-height: 100vh;
 }
 
 .container {
@@ -59,8 +61,9 @@ body {
 
 /* Header Styles */
 header {
-    background-color: white;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    background-color: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -112,7 +115,7 @@ nav ul li a:hover, nav ul li.active a {
 
 /* Hero Section */
 .hero {
-    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../images/hero-bg.jpg') no-repeat center center/cover;
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
     color: white;
     text-align: center;
     padding: 100px 0;
@@ -121,6 +124,7 @@ nav ul li a:hover, nav ul li.active a {
 .hero h2 {
     font-size: 2.5rem;
     margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .hero p {
@@ -129,13 +133,18 @@ nav ul li a:hover, nav ul li.active a {
     max-width: 700px;
     margin-left: auto;
     margin-right: auto;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 }
 
 /* Mission Section */
 .mission {
     padding: 60px 0;
     text-align: center;
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    margin: 40px 20px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
 }
 
 .mission h2 {
@@ -152,15 +161,15 @@ nav ul li a:hover, nav ul li.active a {
 
 /* Services Grid */
 .services {
-    padding: 60px 0;
-    background-color: #f8f9fa;
+    padding: 60px 20px;
 }
 
 .services h2 {
     text-align: center;
-    color: var(--primary-color);
+    color: white;
     margin-bottom: 40px;
     font-size: 2rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .services-grid {
@@ -170,16 +179,19 @@ nav ul li a:hover, nav ul li.active a {
 }
 
 .service-card {
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
     padding: 30px;
-    border-radius: var(--border-radius);
+    border-radius: 15px;
     text-align: center;
-    box-shadow: var(--box-shadow);
-    transition: transform 0.3s ease;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .service-card:hover {
     transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
 }
 
 .service-card i {
@@ -195,45 +207,52 @@ nav ul li a:hover, nav ul li.active a {
 
 /* Search Section */
 .search-section {
-    padding: 80px 0 40px;
+    padding: 80px 20px 40px;
     text-align: center;
-    background-color: var(--light-color);
 }
 
 .search-section h2 {
-    color: var(--primary-color);
+    color: white;
     margin-bottom: 30px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .search-box {
     display: flex;
     max-width: 600px;
     margin: 0 auto;
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: var(--border-radius);
+    padding: 5px;
 }
 
 .search-box select {
     flex: 1;
     padding: 12px;
-    border: 1px solid #ddd;
-    border-radius: var(--border-radius) 0 0 var(--border-radius);
+    border: none;
+    border-radius: var(--border-radius);
     font-size: 16px;
+    background-color: rgba(255, 255, 255, 0.9);
+    margin-right: 5px;
 }
 
 .search-box button {
-    border-radius: 0 var(--border-radius) var(--border-radius) 0;
+    border-radius: var(--border-radius);
 }
 
 /* Results Section */
 .results-section {
-    padding: 40px 0 80px;
+    padding: 40px 20px 80px;
 }
 
 .initial-message {
     text-align: center;
     padding: 50px;
-    background-color: white;
-    border-radius: var(--border-radius);
-    box-shadow: var(--box-shadow);
+    background-color: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
 }
 
 .initial-message i {
@@ -248,11 +267,13 @@ nav ul li a:hover, nav ul li.active a {
 }
 
 .service-listing {
-    background-color: white;
-    border-radius: var(--border-radius);
-    box-shadow: var(--box-shadow);
+    background-color: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
     padding: 25px;
     margin-bottom: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .service-listing h3 {
@@ -290,29 +311,32 @@ nav ul li a:hover, nav ul li.active a {
 
 /* Form Sections */
 .form-section, .feedback-section, .admin-section {
-    padding: 80px 0;
+    padding: 80px 20px;
 }
 
 .form-section h2, .feedback-section h2, .admin-section h2 {
-    color: var(--primary-color);
+    color: white;
     margin-bottom: 20px;
     text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .form-section p, .feedback-section p {
     text-align: center;
     max-width: 700px;
     margin: 0 auto 40px;
-    color: var(--text-light);
+    color: rgba(255, 255, 255, 0.8);
 }
 
 form {
     max-width: 600px;
     margin: 0 auto;
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
     padding: 30px;
-    border-radius: var(--border-radius);
-    box-shadow: var(--box-shadow);
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .form-group {
@@ -350,12 +374,14 @@ form {
 
 #success-message, #feedback-success {
     text-align: center;
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
     padding: 40px;
-    border-radius: var(--border-radius);
-    box-shadow: var(--box-shadow);
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
     max-width: 600px;
     margin: 0 auto;
+    border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 #success-message i, #feedback-success i {
@@ -373,10 +399,12 @@ form {
 .admin-login {
     max-width: 400px;
     margin: 0 auto;
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
     padding: 30px;
-    border-radius: var(--border-radius);
-    box-shadow: var(--box-shadow);
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .admin-login h3 {
@@ -392,11 +420,13 @@ form {
 }
 
 .services-list {
-    background-color: white;
-    border-radius: var(--border-radius);
-    box-shadow: var(--box-shadow);
+    background-color: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
     padding: 20px;
     margin-bottom: 30px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .service-item {
@@ -437,9 +467,11 @@ form {
 
 /* Footer Styles */
 footer {
-    background-color: var(--dark-color);
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.9));
+    backdrop-filter: blur(10px);
     color: white;
     padding: 60px 0 0;
+    margin-top: 40px;
 }
 
 .footer-content {
@@ -480,4 +512,28 @@ footer {
     border-top: 1px solid #495057;
     color: #adb5bd;
     font-size: 0.9rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero h2 {
+        font-size: 2rem;
+    }
+    
+    .services {
+        padding: 40px 15px;
+    }
+    
+    .mission, .search-section, .form-section, .feedback-section, .admin-section {
+        margin: 20px 10px;
+        padding: 40px 15px;
+    }
+    
+    nav ul {
+        display: none;
+    }
+    
+    .mobile-menu {
+        display: block;
+    }
 }
